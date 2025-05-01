@@ -18,8 +18,8 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="create" element={<Create/>}/>
         <Route path="details/:id" element={<MovieDetails/>}/>
-        <Route path="update" element={<Update/>}/>
-        <Route path="delete" element={<Delete/>}/>
+        <Route path="update/:id" element={<Update/>}/>
+        <Route path="delete/:id" element={<Delete/>}/>
 
       </Routes>
       </MovieProvider>
