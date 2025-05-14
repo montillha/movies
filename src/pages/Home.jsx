@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import Table from '../components/Table'
 import { MovieContext } from '../components/MovieContext'
 import axios from 'axios';
+import FormUpdate from '../components/FormUpdate';
 
 const Home = () => {
     const {movies,setMovies} = useContext(MovieContext);
@@ -13,6 +14,7 @@ const Home = () => {
     
   return (
     <Table/>
+  
   )
 }
 
