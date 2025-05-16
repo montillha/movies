@@ -19,7 +19,7 @@ function App() {
         <Route path="create" element={<Create/>}/>
         <Route path="details/:id" element={<MovieDetails/>}/>
         <Route path="update" element={<Update/>}/>
-        <Route path="delete/:id" element={<Delete/>}/>
+        <Route path="delete" element={<Delete/>}/>
 
       </Routes>
       </MovieProvider>

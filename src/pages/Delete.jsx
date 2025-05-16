@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import FormDelete from '../components/FormDelete';
 
 const Delete = () => {
-  return (
-    <div>Delete</div>
-  )
-}
+  return <FormDelete />; 
+};
 
-export default Delete
+export default Delete;
