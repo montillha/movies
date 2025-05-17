@@ -5,6 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 const SingleMovie = () => {
     const{id} = useParams();
     const [movie,setMovie]=useState({
+        posterUrl:"",
         nome:"",
         genero:"",
         ano:""
@@ -22,17 +23,23 @@ const SingleMovie = () => {
     },[]);
 
   return (
-    <div  className="container d-flex justify-content-center">
+    <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
       <div className="card shadow mt-3">
-      <div className="card-body">
-        <h4 className="card-title text-center">Detalhes do filme:</h4>
-        <p className="card-text"><strong>Nome:</strong> {movie.nome}</p>
-        <p className="card-text"><strong>Gênero:</strong> {movie.genero}</p>
-        <p className="card-text"><strong>Ano:</strong> {movie.ano}</p>
-        <button className="btn btn-danger mt-2" onClick={handleBack} >Voltar</button>
+        <div className="card-body text-center">
+          <h4 className="card-title">Detalhes do filme:</h4>
+          <img
+            src={movie.posterUrl}
+            alt={`Cartaz de ${movie.nome}`}
+            style={{ maxWidth: "200px", borderRadius: "8px", marginBottom: "16px" }}
+          />
+          <p className="card-text"><strong>Nome:</strong> {movie.nome}</p>
+          <p className="card-text"><strong>Gênero:</strong> {movie.genero}</p>
+          <p className="card-text"><strong>Ano:</strong> {movie.ano}</p>
+          <button className="btn btn-danger mt-2" onClick={handleBack}>Voltar</button>
+        </div>
       </div>
     </div>
-  </div>
+
   )
 }
 

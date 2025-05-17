@@ -6,6 +6,7 @@ import axios from 'axios';
 const Form = () => {
     const navigate = useNavigate();
     const [movie,setMovie]=useState({
+        posterUrl: "",
         nome:"",
         genero:"",
         ano:""
@@ -28,6 +29,14 @@ const Form = () => {
     }
   return (
     <form onSubmit={handleSubmit}>
+
+    <div className="mb-3">
+      <label htmlFor="posterUrl" className="form-label">Link do Cartaz:</label>
+      <input type="url" required className="form-control" id="posterUrl" value={movie.posterUrl || ""}
+      onChange={e => setMovie({ ...movie, posterUrl: e.target.value })}
+      />
+    </div>
+
     <div className="mb-3">
       <label htmlFor="nome" className="form-label">Nome:</label>
       <input type="text" required className="form-control" id="nome" value={movie.nome}
