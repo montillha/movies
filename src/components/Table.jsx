@@ -11,22 +11,18 @@ const Table = () => {
     };
   return (
     <div className='table-container'>
-    <table className="table table-striped table-hover">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Nome</th>
-        </tr>
-      </thead>
-      <tbody>
-        {movies.map((movie)=>(
-            <tr key={movie.id} onClick={()=>handleDetails(movie.id) }>
-                <td>{movie.id}</td>
-                <td>{movie.nome}</td>
-            </tr>
-        ))}
-      </tbody>
-    </table>
+      <table className="table table-striped table-hover">
+        <tbody>
+          {movies.map((movie)=>(
+              <tr key={movie.id} onClick={()=>handleDetails(movie.id) }>
+                  <td>
+                    <i class="bi bi-film me-2"> </i>
+                    {movie.nome}
+                  </td>
+              </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

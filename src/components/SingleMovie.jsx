@@ -5,6 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 const SingleMovie = () => {
     const{id} = useParams();
     const [movie,setMovie]=useState({
+        id:"",
         posterUrl:"",
         nome:"",
         genero:"",
@@ -27,6 +28,7 @@ const SingleMovie = () => {
       <div className="card shadow mt-3">
         <div className="card-body text-center">
           <h4 className="card-title">Detalhes do filme:</h4>
+          <p className="card-text fs-4"><strong>ID:</strong> <strong>{movie.id}</strong></p>
           <img
             src={movie.posterUrl}
             alt={`Cartaz de ${movie.nome}`}

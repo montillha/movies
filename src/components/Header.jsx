@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
-      <h1 className="text-center">Catálogo de Filmes</h1>
+      <h1 className="text-center d-flex justify-content-center align-items-center gap-2">
+        <i className="bi bi-camera-reels-fill"></i>
+        Catálogo de Filmes
+      </h1>
       <ul className="nav justify-content-center">
         <li className="nav-item">
           <Link to="/" className="nav-link">
