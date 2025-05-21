@@ -16,7 +16,7 @@ const Table = () => {
           {movies.map((movie)=>(
               <tr key={movie.id} onClick={()=>handleDetails(movie.id) }>
                   <td>
-                    <i class="bi bi-film me-2"> </i>
+                    <i className="bi bi-film me-2" style={{ color: '#222', filter: 'drop-shadow(0 0 1px black)' }}> </i>
                     {movie.nome}
                   </td>
               </tr>
